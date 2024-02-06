@@ -23,6 +23,10 @@
             .url = "git+https://github.com/binarycraft007/libelf#7407d49b85c69640ec08684cd81f1141c0f310fa",
             .hash = "1220aa4621da492c453eeadc0a53cce3b7571bdb5539986764fb8305bdbd1c626cc4",
         },
+        .zlib = .{
+            .url = "git+https://github.com/allyourcodebase/zlib#3ef59ef2f3577c415c0deb292d180a88a01ed6b2",
+            .hash = "1220fc4b799253e8d6659825881a3d433bc072c140aaeaab73eeda01076cecea0402",
+        },
     },
 
     // Specifies the set of files and directories that are included in this package.

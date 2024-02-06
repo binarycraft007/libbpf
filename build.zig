@@ -12,13 +12,17 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    lib.root_module.link_libc = true;
+    lib.linkLibC();
     lib.defineCMacro("_LARGEFILE64_SOURCE", null);
     lib.defineCMacro("_FILE_OFFSET_BITS", "64");
-    lib.root_module.linkLibrary(b.dependency("elf", .{
+    lib.linkLibrary(b.dependency("elf", .{
         .target = target,
         .optimize = optimize,
     }).artifact("elf"));
+    lib.linkLibrary(b.dependency("zlib", .{
+        .target = target,
+        .optimize = optimize,
+    }).artifact("z"));
     lib.addCSourceFiles(.{
         .dependency = bpf_dep,
         .files = &libbpf_src,
