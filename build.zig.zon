@@ -20,8 +20,8 @@
             .hash = "12209d895f5d3718e1d6c7c387e6c7bce8c04513e972f7bb774c54967a84e4c56db8",
         },
         .elf = .{
-            .url = "git+https://github.com/binarycraft007/libelf#8125023fc8e87c53c771cd5288fbf54740816b1c",
-            .hash = "12209f11f5c50c2ad33344e66ba6fc4edc5a225c218123436d6625a2d0d63ebd0f2c",
+            .url = "git+https://github.com/binarycraft007/libelf#7407d49b85c69640ec08684cd81f1141c0f310fa",
+            .hash = "1220aa4621da492c453eeadc0a53cce3b7571bdb5539986764fb8305bdbd1c626cc4",
         },
     },
 
