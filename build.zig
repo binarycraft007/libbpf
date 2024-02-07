@@ -44,16 +44,9 @@ pub fn build(b: *std.Build) void {
             .include_extensions = &.{file},
         });
     }
-    lib.installHeadersDirectoryOptions(.{
-        .source_dir = .{ .path = "include" },
-        .install_dir = .header,
-        .install_subdir = "",
-        .include_extensions = &.{"vmlinux.h"},
-    });
     lib.addIncludePath(bpf_dep.path("src"));
     lib.addIncludePath(bpf_dep.path("include"));
     lib.addIncludePath(bpf_dep.path("include/uapi"));
-    lib.addIncludePath(.{ .path = "include" });
     b.installArtifact(lib);
 }
 
